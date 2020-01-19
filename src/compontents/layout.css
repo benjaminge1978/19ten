@@ -9,7 +9,18 @@ html {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background: #f9f9f9;
   }
+ 
+ a {
+   color: #d01145;
+   text-decoration: none;
+   transition: 0.3s;
+ } 
+
+ a:hover {
+  color: #800929;
+ }
 
 .d-grid {
     display: grid;
@@ -19,4 +30,5 @@ html {
 .right-col-info {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 30px;
 }

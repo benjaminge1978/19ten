@@ -2,12 +2,24 @@
     display: grid;
     grid-template-columns: 2fr 2fr;
     margin-bottom: 90px;
+    align-items: center;
+    box-shadow: 10px 22px 34px 0 rgba(7,15,38,.07);
+    background:#FFF;
+}
+
+.gatsby-image-wrapper {
+    overflow: hidden;
 }
 
 .company-logo {
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .company-img {
-    margin-right: 60px;
+    object-fit: cover;
+    height:auto;
+}
+
+.company-info {
+    padding: 30px;
 }

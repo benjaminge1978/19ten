@@ -11,8 +11,8 @@ const Company = () => {
     allContentfulNineteenTen(sort: {fields: [date], order: ASC}) {
       edges {
         node {
-          id
-          date
+          idUrl
+          idanchor
           mainImage {
             fluid {
               ...GatsbyContentfulFluid
@@ -40,16 +40,15 @@ const Company = () => {
               {data.allContentfulNineteenTen.edges.map((edge, index) => {
                   return (
                       <div className="company-grid" key={index}>
-                        <div className="company-img">
+                        <div id={edge.node.idanchor} className="company-img">
                         <Img fluid={edge.node.mainImage.fluid} alt={edge.node.businessTitle}/>
                         </div>
                         <div className="company-info">
                         <LogoImg className="company-logo" fluid={edge.node.businessLogo.fluid} alt={edge.node.businessTitle}/>
-                              <h2>{edge.node.businessTitle}</h2>
                               <article>
                               {documentToReactComponents(edge.node.aboutText.json)}
                               </article>
-                  <Link to ={edge.node.buttonUrl}>Visit {edge.node.businessTitle}</Link>
+                  <a href ={edge.node.buttonUrl}>Visit {edge.node.businessTitle}</a>
                   </div>
          </div>
                   )

@@ -6,7 +6,7 @@ import "./navigation.css"
 export const Nav = () => {
   const data = useStaticQuery(graphql`
     query menuQuery {
-      allContentfulNineteenTen {
+      allContentfulNineteenTen(sort: {fields: [date], order: ASC}) {
         edges {
           node {
             businessTitle
@@ -21,15 +21,16 @@ export const Nav = () => {
     <nav>
       <div className="nav-inner">
       <img src={NineLogo} alt="19ten Logo" />
-      <div>
+      <ul>
               {data.allContentfulNineteenTen.edges.map((edge, index) => {
                   return (
-                      <div key={index}>
+                      <li key={index}>
                   <Link to ={edge.node.idUrl}>{edge.node.businessTitle}</Link>
-                      </div>
+
+                      </li>
                   )
               })}
-      </div>
+      </ul>
       </div>
     </nav>
   )

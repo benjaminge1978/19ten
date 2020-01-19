@@ -9,7 +9,6 @@ export const index = () => {
         <Layout>
             <About />
             <Company />
-            Testing the layout
             <img src="../images/codex-header.jpg" alt=""/>
         </Layout>
     )
