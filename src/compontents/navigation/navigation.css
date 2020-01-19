@@ -1,0 +1,16 @@
+nav {
+    position: relative;
+    height: 100%;
+    width: 250px;
+    height:100vh;
+    margin: 0 50px 0 0px;
+    
+}
+
+.nav-inner {
+    position: fixed;
+    background: #333;
+    padding: 30px;
+    height: 100%;
+    width: 200px;
+}

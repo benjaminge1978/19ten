@@ -1,0 +1,13 @@
+body {
+    margin:0;
+}
+
+.d-grid {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+}
+
+.right-col-info {
+    max-width: 1000px;
+    margin: 0 auto;
+}
