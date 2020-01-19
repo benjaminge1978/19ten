@@ -1,4 +1,13 @@
 .company-grid {
     display: grid;
     grid-template-columns: 2fr 2fr;
+    margin-bottom: 90px;
+}
+
+.company-logo {
+    max-width: 100px;
+}
+
+.company-img {
+    margin-right: 60px;
 }

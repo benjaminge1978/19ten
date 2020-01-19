@@ -8,9 +8,11 @@ import "./company.css"
 const Company = () => {
   const data = useStaticQuery(graphql`
   query MyQuery {
-    allContentfulNineteenTen {
+    allContentfulNineteenTen(sort: {fields: [date], order: ASC}) {
       edges {
         node {
+          id
+          date
           mainImage {
             fluid {
               ...GatsbyContentfulFluid
@@ -42,7 +44,7 @@ const Company = () => {
                         <Img fluid={edge.node.mainImage.fluid} alt={edge.node.businessTitle}/>
                         </div>
                         <div className="company-info">
-                        <LogoImg fluid={edge.node.businessLogo.fluid} alt={edge.node.businessTitle}/>
+                        <LogoImg className="company-logo" fluid={edge.node.businessLogo.fluid} alt={edge.node.businessTitle}/>
                               <h2>{edge.node.businessTitle}</h2>
                               <article>
                               {documentToReactComponents(edge.node.aboutText.json)}
